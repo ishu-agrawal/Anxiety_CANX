@@ -98,7 +98,7 @@ def predict1_api():
     For direct API calls trought request
     '''
     data = request.get_json(force=True)
-    prediction = model1.predict([np.array(list(data.values()))])
+    prediction = model.predict([np.array(list(data.values()))])
 
     output = prediction[0]
     return jsonify(output)
